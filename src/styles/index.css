@@ -1,12 +1,59 @@
+.container {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, black, darkgrey);
+    color: white;  
+    border-radius: 10%;
+}
 
-/* 
+li {
+    color:white;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
 
-*/
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border: transparent;
+    padding-top: 100px;
+    
+}
+
+.backward {
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    color:  black;
+    font-size: 30px;
+}
+
+.play {
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    color:  black;
+    font-size: 50px;
+}
+
+.forward {
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    color:  black;
+    font-size: 30px;
+}
+
+#app {
+    margin-top: 50px;
+}
