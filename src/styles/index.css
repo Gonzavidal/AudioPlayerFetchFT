@@ -1,59 +1,81 @@
-.container {
-    height: 500px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(180deg, black, darkgrey);
-    color: white;  
-    border-radius: 10%;
+html {
+  width: 500px;
+  height: 400px;
 }
 
-li {
-    color:white;
+
+.reproductor {
+  height: 500px; 
 }
 
-button {
-    background-color: transparent;
-    border: none;
-    color: white;
+.list {
+  background-color:black;
+  color:grey;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: start;
+  position: sticky;
+  overflow-y: auto;
+  height: 410px;
+  
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: none;
-    border: transparent;
-    padding-top: 100px;
-    
+  background-color: black;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .backward {
-    border-radius: 50px;
-    background-color: transparent;
-    border: none;
-    color:  black;
-    font-size: 30px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: none;
+  color:  green;
+  font-size: 30px;
 }
 
 .play {
-    border-radius: 50px;
-    background-color: transparent;
-    border: none;
-    color:  black;
-    font-size: 50px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: none;
+  color:  green;
+  font-size: 50px;
 }
 
 .forward {
-    border-radius: 50px;
-    background-color: transparent;
-    border: none;
-    color:  black;
-    font-size: 30px;
+  border-radius: 50px;
+  background-color: transparent;
+  border: none;
+  color:  green;
+  font-size: 30px;
 }
 
-#app {
-    margin-top: 50px;
+button {
+  background-color: transparent;
+  border: none;
+  color: grey;
+
+}
+
+li:hover {
+  background-image: linear-gradient(to left, black , darkgreen);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

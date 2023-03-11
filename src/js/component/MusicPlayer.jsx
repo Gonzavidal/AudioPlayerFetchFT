@@ -1,15 +1,10 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import { FaPlay , FaStepBackward , FaStepForward , FaPause } from "react-icons/fa";
 
 
 const MusicPlayer = () => {
 
-    const [playingSong, setPlayingSong] = useState( [
-        { "id":1, "category":"game", "name":"Mario Castle", "url":"files/mario/songs/castle.mp3"},
-        { "id":2, "category":"game", "name":"Mario Star", "url":"files/mario/songs/hurry-starman.mp3"},
-        { "id":3, "category":"game", "name":"Mario Overworld", "url":"files/mario/songs/overworld.mp3"},
-    
-    ]);
+    const [playingSong, setPlayingSong] = useState([]);
 
     let playingSongRef = useRef();
 
@@ -25,6 +20,19 @@ const MusicPlayer = () => {
         </li>)
 
         });
+
+        const allSongs = () => {
+            fetch("https://assets.breatheco.de/apis/sound/songs")
+            .then((response) => response.json())
+            .then((data) => {
+                setPlayingSong(data);
+            });
+        }
+
+        useEffect(() => {
+            allSongs()
+        });
+    
 
     const [icono, setIcono] = useState(<FaPlay />)
 
